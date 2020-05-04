@@ -32,6 +32,8 @@ find_package(Qt5Core REQUIRED)
 find_package(Qt5PrintSupport REQUIRED)
 find_package(Qt5Widgets REQUIRED)
 
+add_subdirectory(extcap)
+
 
 include_directories(
 	${Wireshark_INCLUDE_DIR}
@@ -65,5 +67,4 @@ target_link_libraries(example
 INSTALL(TARGETS example
 DESTINATION
 	"${Wireshark_PLUGIN_INSTALL_DIR}/epan")
-INSTALL(PROGRAMS extcap.py DESTINATION ${Wireshark_LIB_DIR}/wireshark/extcap)
 
